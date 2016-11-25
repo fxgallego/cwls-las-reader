@@ -179,7 +179,7 @@ module LasReader
       raise "No such file or directory"
     end
 
-    File.open(file_name).each do |line|
+    File.open(file_name, 'r:ISO-8859-1').each do |line|
       # ignore comments
       next if line[0].chr == '#' 
       # The '~' is used to inform the beginning of a section
